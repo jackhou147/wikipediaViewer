@@ -22,7 +22,7 @@ _app.searchBar().onclick = function(){
 _app.searchBar().onkeypress = function(){
   var keycode = event.keycode || event.which;
   if(keycode == 13){
-    alert(this.value);
+    json(this.value,"https://en.wikipedia.org/w/api.php?action=query&srlimit=15&list=search&format=json&callback=displayResult&srsearch=");
     return false;
   }
 }

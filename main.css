@@ -11,15 +11,16 @@ body,
     color: white;
 }
 
-
 body {
     width: 100vw;
-    height: 100vh;
+    height: 100vh ;
     margin: 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #092B40;
+    border: 1px dashed red;
+    overflow-x: hidden;
 }
 
 .buttons {
@@ -60,4 +61,24 @@ body {
     background-size: cover;
     margin-right: 3px;
 }
+
+.result-list {
+    width: 80vw;
+    overflow: hidden;
+    border: 1px dashed red;
+    margin-top: 5vw;
+}
+
+.body {
+    height: inherit;
+    padding-top: 5%;
+}
+
+.result-list__result {
+    background-color: #E6E6E7;
+    color: black;
+    padding: 2% 12%;
+    margin-top: 3vw;
+}
+
 

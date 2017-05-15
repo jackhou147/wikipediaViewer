@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+    
+}
+
+body,
+.buttons,
+.buttons__search,
+.buttons__random {
+    display: flex;
+    color: white;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #092B40;
+}
+
+.buttons {
+    width: 66vw;
+    height: 8vw;/*
+    border: 1px dashed red;*/
+    margin-top: 2.5vw;
+    flex-direction: row;
+    justify-content: space-around;
+    visibility: hidden;
+}
+
+.buttons__search,
+.buttons__random{
+    width: 40%;/*
+    border: 1px dashed black;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.buttons__search::before,
+.buttons__random::before {
+    content: "";
+    height: 100%;
+    width: 30%;/*
+    border: 1px dashed green;*/
+}
+
+.buttons__search::before {
+    background: url("searchIcon.svg");
+    background-size:cover;
+}
+
+.buttons__random::before {
+    background: url("random.svg");
+    background-size: cover;
+    margin-right: 3px;
+}
+

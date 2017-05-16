@@ -1,3 +1,18 @@
+* {
+  box-sizing: border-box
+}
+
+body {
+  background-color: #092B40;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .app {
   padding: 5px;
   display: flex;
@@ -7,18 +22,17 @@
 }
 
 .app__search-bar {
-  border: 0;
-  width: 12vw;
-  height: 12vw;
+  width: 25vw;
+  height: 25vw;
   border-radius: 50%;
-  box-shadow: 0 0 0 .7vw #D96F32;
   background-color: transparent;
   transition: all .15s ease-out;
   box-sizing: border-box;
   padding: 0 3vw 0 1vw;
   color: white;
-  font-size: 1.3em;
+  font-size: 20vw;
   cursor: pointer;
+  border: .7vw solid #D96F32;
 }
 
 .app__search-bar:focus {
@@ -28,44 +42,48 @@
 .form::after {
   content: "";
   display: inline-block;
-  width: 4vw;
-  height: .8vw;
+  width: 8vw;
+  height: .7vw;
   background-color: #D96F32;
-  transform: rotate(45deg) translate(2.5vw,6vw);
+  transform: rotate(45deg) translate(4.2vw,11vw);
 }
 
 .app__search-bar-focus {
-  width: 80vw;
+  width: 95vw;
   border-radius: 20px;
   cursor: text;
 }
 
 .app__close-btn {
-    position: absolute;
-    width: 8vw;
-    height: 100%;
-    right: 8px;
-    cursor: pointer;
-    display: none;
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  right: 12px;
+  cursor: pointer;
+  display: none;
 }
 
 .app__close-btn div {
-  width: 5vw;
-  height: .4vw;
+  width: 12vw;
+  height: 1.2vw;
   background-color: #D96F32;
   transform: rotate(45deg);
   position: absolute;
-  top: calc((100% - .3vw) /2);
-  left: calc((100% - 3vw) /2);
+  top: calc((100% - 1.2vw) /2);
+  left: calc((100% - 12vw) /2);
 }
 
 .app__close-btn div:after {
   content: "";
   display: inline-block;
-  width: 5vw;
-  height: .4vw;
+  width: 12vw;
+  height: 1.2vw;
   background-color: #D96F32;
   position: absolute;
   transform: rotate(90deg);
   cursor: pointer;
 }
+
+
+
+

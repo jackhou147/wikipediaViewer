@@ -43,9 +43,9 @@ body {
   content: "";
   display: inline-block;
   width: 8vw;
-  height: .7vw;
+  height: .6vw;
   background-color: #D96F32;
-  transform: rotate(45deg) translate(4.2vw,11vw);
+  transform: rotate(45deg) translate(4.3vw,14vw);
 }
 
 .app__search-bar-focus {
@@ -83,6 +83,113 @@ body {
   transform: rotate(90deg);
   cursor: pointer;
 }
+
+@media only screen and (min-width: 480px) {
+    .app__search-bar {
+        width: 15vw;
+        height: 15vw;
+    }
+    
+    .app__search-bar-focus {
+        width: 70vw;
+    }
+    
+    .form::after {
+        width: 6vw;
+        height: .6vw;
+        transform: rotate(45deg) translate(2.5vw,9vw);
+    }
+    
+    .app__close-btn div {
+        width: 10vw;
+        height: 1vw;
+        top: calc((100% - 1vw) /2);
+        left: calc((100% - 10vw) /2);
+    }
+    
+    .app__close-btn div:after {
+        width: 10vw;
+        height: 1vw;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .app__search-bar {
+        width: 8vw;
+        height: 8vw;
+    }
+    
+    .app__search-bar-focus {
+        width: 60vw;
+    }
+    
+    .form::after {
+        width: 3vw;
+        height: .6vw;
+        transform: rotate(45deg) translate(1.3vw,5vw);
+    }
+    
+    .app__close-btn div {
+        width: 6vw;
+        height: .6vw;
+        top: calc((100% - 0.6vw) /2);
+        left: calc((100% - 6vw) /2);
+    }
+    
+    .app__close-btn div:after {
+        width: 6vw;
+        height: .6vw;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .app__search-bar {
+        width: 7vw;
+        height: 7vw;
+        border: .5vw solid #D96F32;
+    }
+    
+    .app__search-bar-focus {
+        width: 50vw;
+    }
+    
+    .form::after {
+        width: 2.5vw;
+        height: .5vw;
+        transform: rotate(45deg) translate(1vw,4.1vw);
+    }
+    
+    .app__close-btn div {
+        width: 5vw;
+        height: .5vw;
+        top: calc((100% - 0.5vw) /2);
+        left: calc((100% - 5vw) /2);
+    }
+    
+    .app__close-btn div:after {
+        width: 5vw;
+        height: .5vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .app__search-bar {
+        width: 6vw;
+        height: 6vw;
+        border: .3vw solid #D96F32;
+    }
+    
+    .app__search-bar-focus {
+        width: 50vw;
+    }
+    
+    .form::after {
+        width: 2vw;
+        height: .25vw;
+        transform: rotate(45deg) translate(.8vw,3.8vw);
+    }
+}
+
 
 
 

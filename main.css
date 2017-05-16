@@ -32,18 +32,18 @@ form {
 
 .buttons {
     width: 66vw;
-    height: 8vw;/*
+    height: 10vw;/*
     border: 1px dashed red;*/
     margin-top: 2.5vw;
     flex-direction: row;
     justify-content: space-around;
-    visibility: hidden;
-    /*border: 1px dashed red;*/
+    visibility: hidden;/*
+    border: 1px dashed red;*/
 }
 
 .buttons__search,
 .buttons__random{
-    width: 40%;/*
+    width: 45%;/*
     border: 1px dashed black;*/
     height: 100%;
     display: flex;
@@ -54,26 +54,23 @@ form {
 
 .buttons__search::before,
 .buttons__random::before {
-    /*border: 1px dashed green;*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 30%;
+    display: inline-block;
 }
 
 .buttons__search::before {
     content: "";
-    display: inline-block;
-    height: 100%;
-    width: 30%;
     background-image: url("searchIcon.svg");
-    background-size:cover;
 }
 
 .buttons__random::before {
     content: "";
-    display: inline-block;
-    height: 100%;
-    width: 30%;
     background-image: url("random.svg");
-    background-size: cover;
-    margin-right: 3px;
+    margin-right: 2px;
 }
 
 .result-list {
@@ -93,6 +90,33 @@ form {
     color: black;
     padding: 2% 12%;
     margin-top: 3vw;
+}
+
+@media only screen and (min-width: 480px) {
+    .buttons {
+        width: 55vw;
+        height: 7vw;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) {
+    .buttons {
+        width: 38vw;
+        height: 5vw;
+    }
+    
+    .buttons__search::before,
+    .buttons__random::before {
+        height: 97%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .buttons {
+        width: 40vw;
+        height: 4vw;
+    }
 }
 
 

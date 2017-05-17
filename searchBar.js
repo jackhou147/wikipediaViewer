@@ -11,6 +11,7 @@ var _app = {
 }
 
 _app.searchBar().onclick = function(){
+    this.readOnly = false;
   if(!this.classList.contains("app__search-bar-focus")){
     this.classList.add("app__search-bar-focus");
     _app.closeBtn().style.display = "inline-block";
@@ -18,7 +19,7 @@ _app.searchBar().onclick = function(){
   }
 }
 
-_app.searchBar().onkeypress = function(){
+_app.searchBar().onkeypress = function(event){
   var keycode = event.keycode || event.which;
   if(keycode == 13){
       this.blur();
@@ -26,6 +27,10 @@ _app.searchBar().onkeypress = function(){
     return false;
   }
 }
+
+_app.searchBar().addEventListener("blur",function(){ 
+    this.readOnly = true;
+})
 
 _app.closeBtn().onclick = function(){
     setTimeout(function(){

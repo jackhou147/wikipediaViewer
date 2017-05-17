@@ -41,6 +41,16 @@ _app.closeBtn().addEventListener("click",function(){
         _buttons.toggle();
     },200);
 })
+/*
+
+document.querySelector(".result-list__result").onmouseover = function(){
+    this.classList.add("result-list__result-hover");
+}
+
+document.querySelector(".result-list__result").onmouseout = function(){
+    this.classList.remove("result-list__result-hover");
+}
+*/
 
 function json(val,url){
     window.displayResult = function(result){
@@ -76,4 +86,5 @@ function json(val,url){
     var script = document.createElement("script");
     script.src = url+val;
     $head.appendChild(script);
-}
+};
+

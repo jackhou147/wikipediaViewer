@@ -177,22 +177,35 @@ body {
 
 @media only screen and (min-width: 1200px) {
     .app__search-bar {
-        width: 6vw;
-        height: 6vw;
+        width: 4vw;
+        height: 4vw;
         border: .3vw solid #D96F32;
-        font-size: 3vw;
+        font-size: 2.3vw;
     }
     
     .app__search-bar-focus {
-        width: 50vw;
+        width: 40vw;
     }
     
     .form::after {
-        width: 2vw;
+        width: 1.5vw;
         height: .25vw;
-        transform: rotate(45deg) translate(.8vw,3.8vw);
+        transform: rotate(45deg) translate(.6vw,2.6vw);
+    }
+    
+    .app__close-btn div {
+        width: 3vw;
+        height: .3vw;
+        top: calc((100% - 0.3vw) /2);
+        left: calc((100% - 3vw) /2);
+    }
+    
+    .app__close-btn div:after {
+        width: 3vw;
+        height: .3vw;
     }
 }
+
 
 
 

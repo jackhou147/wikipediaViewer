@@ -50,6 +50,7 @@ form {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
 
 .buttons__search::before,
@@ -73,11 +74,50 @@ form {
     margin-right: 2px;
 }
 
+.buttons__random a{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
 .result-list {
     width: 80vw;
     overflow: hidden;
-    /*border: 1px dashed red;*/
+    border: 1px dashed red;
     margin-top: 5vw;
+    opacity: 0;
+    position: relative;
+}
+
+.result-list-fade-in {
+    animation: fade-in .2s ease-in forwards;
+}
+
+.result-list-fade-out {
+    animation: fade-out .1s ease-in forwards;
+}
+
+@keyframes fade-in {
+    from {
+        top: 400px;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        top: 0;
+        opacity: 1;
+    }
+    to {
+        top: 400px;
+        opacity: 0;
+    }
 }
 
 .body {
@@ -90,6 +130,21 @@ form {
     color: black;
     padding: 2% 12%;
     margin-top: 3vw;
+    box-sizing: initial;
+    position: relative;
+}
+
+.result-list__result:hover {
+    border-left: 1vw solid #D96F32;
+}
+
+.result-list__result a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
 }
 
 @media only screen and (min-width: 480px) {

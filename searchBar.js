@@ -21,16 +21,20 @@ _app.searchBar().onclick = function(){
 _app.searchBar().onkeypress = function(){
   var keycode = event.keycode || event.which;
   if(keycode == 13){
-    json(this.value,"https://en.wikipedia.org/w/api.php?action=query&srlimit=15&list=search&format=json&callback=displayResult&srsearch=");
+      this.blur();
+    json(this.value,"https://en.wikipedia.org/w/api.php?format=json&callback=displayResult&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=");
     return false;
   }
 }
 
 _app.closeBtn().onclick = function(){
-  _app.searchBar().classList.remove("app__search-bar-focus");
-  _app.closeBtn().style.display = "none";
-  _app.app().classList.add("form");
-  _app.searchBar().value = "";
+    setTimeout(function(){
+        _app.searchBar().classList.remove("app__search-bar-focus");
+        _app.closeBtn().style.display = "none";
+        _app.app().classList.add("form");
+        _app.searchBar().value = "";
+    },200)
+  
 }
 
 

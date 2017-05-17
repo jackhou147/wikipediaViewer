@@ -30,10 +30,14 @@ _app.searchBar().addEventListener("click",function(){
 
 _app.closeBtn().addEventListener("click",function(){
     _buttons.visible = false;
-    document.querySelector(".result-list").classList.add("result-list-fade-out");
+    if(document.querySelector(".result-list")){
+        document.querySelector(".result-list").classList.add("result-list-fade-out");
+    }
     setTimeout(function(){
         document.body.classList.remove("body");
-        document.getElementsByTagName("body")[0].removeChild(document.querySelector(".result-list"));
+        if(document.querySelector(".result-list")){
+            document.getElementsByTagName("body")[0].removeChild(document.querySelector(".result-list"));
+        }
         _buttons.toggle();
     },200);
 })
